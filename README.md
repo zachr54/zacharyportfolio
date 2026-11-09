@@ -27,16 +27,18 @@ Certificates go in `assets/certificates/`:
 
 | File name | Certificate |
 |---|---|
-| `opa-provincials.jpg` | Gold, OPA Ontario Provincials (powerlifting) |
+| `opa-provincials.webp` | Gold, OPA Ontario Provincials medal (added) |
 | `swimming.jpg` | Gold & bronze, Central Region Championships |
-| `rugby-mip.jpg` | Most Improved Player 2026 |
+| `rugby-mip.webp` | Most Improved Player trophy (added) |
+| `spring-classic.webp` | Spring Classic medal (added) |
 | `lifeguard-nl-pool.jpg`, `lifesaving-instructor.jpg`, `swim-instructor.jpg`, `first-aid-instructor.jpg`, `first-aid-cpr-c.jpg`, `high-five.jpg` | Lifesaving Society and HIGH FIVE certifications (added). To update one, replace the file with the same name. Cover your home address first. |
-| `omfa-guitar.jpg` | Gold, OMFA Provincials |
+| `omfa-guitar.webp` | Gold, OMFA Provincials medal (added) |
 | `kiwanis-guitar.jpg` | Gold, Ontario Kiwanis Music Festival |
+| `kumon-level-j.webp` | Kumon Math Level J plaque (added) |
 | `honor-roll.jpg` | Advanced Student Honor Roll Award |
 | `math-contests.jpg` | Math contest certificate |
 | `dublin-heights.jpg` | Dublin Heights awards |
-| `kaggle.jpg` | Kaggle |
+| `kaggle.jpg` | Kaggle Python (added) |
 
 Projects go in `assets/projects/`: `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts), `arduino.jpg`.
 
@@ -44,6 +46,8 @@ Other photos go in `assets/photos/`: `swimming.jpg` (you swimming), `fitness-clu
 
 To swap the powerlifting photo for one from OPA Provincials, replace `assets/web/powerlifting.jpg`
 with your new photo (same name).
+
+Medals and trophies are saved as `.webp` with the background removed, so they sit on the page's spotlight.
 
 Tips: use JPG, about 1200–1600 px wide, and take certificate photos straight-on in good light.
 
