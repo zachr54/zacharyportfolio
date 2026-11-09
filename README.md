@@ -20,8 +20,8 @@ Open `index.html` in a browser to view it.
 
 ## Adding photos (certificates and projects)
 
-Photo spots show a dashed "Add photo" box with a file name. Save your photo with **exactly that name** and it
-appears automatically. No code changes needed.
+A photo spot whose file doesn't exist yet is hidden on the site. Save your photo with **exactly the name in its
+`data-file` attribute** and it appears automatically. No code changes needed.
 
 Certificates go in `assets/certificates/`:
 
@@ -72,8 +72,8 @@ In `certificates.html`, copy one `<figure class="cert" …>…</figure>` block, 
 
 ## Before sending this to universities
 
-Placeholders are highlighted in teal on the page. Search the HTML for `class="todo"` to find them, then replace each
-one with plain text. For example:
+Optional placeholders are hidden on the live site. Search the HTML for `class="todo"` to find them, then replace each
+one with plain text (without the class) to make it show. For example:
 
 ```html
 <span class="todo">your email</span>   →   you@example.com

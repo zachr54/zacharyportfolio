@@ -73,6 +73,47 @@ document.addEventListener('DOMContentLoaded', () => {
         box.addEventListener('click', e => { if (e.target === box || e.target.closest('.close')) box.close(); });
     }
 
+    // Email links: copy the address and show a message, then let the mail app
+    // open too. Many computers have no mail app set up, so a plain mailto link
+    // can look like it does nothing.
+    let toast, toastTimer;
+    const showToast = text => {
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.setAttribute('role', 'status');
+            document.body.appendChild(toast);
+        }
+        toast.textContent = text;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+    };
+    const copyText = text => {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
+        // Older browsers and non-https pages
+        const field = document.createElement('textarea');
+        field.value = text;
+        field.setAttribute('readonly', '');
+        field.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.appendChild(field);
+        field.select();
+        const ok = document.execCommand('copy');
+        field.remove();
+        return ok ? Promise.resolve() : Promise.reject();
+    };
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.title = 'Copy email address';
+        link.addEventListener('click', () => {
+            const address = link.getAttribute('href').slice(7).split('?')[0];
+            copyText(address)
+                .then(() => showToast('Email copied: ' + address))
+                .catch(() => showToast(address));
+        });
+    });
+
     // Print button on the resume page
     document.querySelectorAll('[data-print]').forEach(btn =>
         btn.addEventListener('click', () => window.print()));
