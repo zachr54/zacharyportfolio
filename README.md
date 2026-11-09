@@ -1,48 +1,74 @@
 # Zachary — Portfolio
 
 Personal portfolio for university applications. Plain HTML, CSS and a little JavaScript; no build step.
-Open `index.html` in a browser to view it, or publish the folder with GitHub Pages.
+Open `index.html` in a browser to view it.
 
 ## Pages
 
 | File | Page |
 |---|---|
-| `index.html` | Home: intro, highlights, links to every section |
-| `about.html` | My story, heritage, values |
+| `index.html` | Home |
+| `about.html` | Story, heritage, quick facts, values |
 | `academics.html` | Awards, contests, coursework |
 | `activities.html` | Guitar, folk dance, rugby, robotics, powerlifting |
-| `service.html` | Service, leadership and volunteer hours |
-| `ics4u0.html` | Java projects from ICS4U0 |
-| `tutorial.html` | OOP tutorial |
-| `goals.html` | University and career goals |
+| `service.html` | Service, leadership, volunteer hours |
+| `projects.html` | Electronics projects (Arduino, ESP32, mmWave) |
+| `certificates.html` | Certificate photos with filters and a full-size viewer |
+| `goals.html` | Electrical Engineering and beyond |
 | `resume.html` | One-page résumé (print or save as PDF) |
-| `bibliography.html` | Credits and sources |
+| `bibliography.html` | Credits |
+
+## Adding photos (certificates and projects)
+
+Photo spots show a dashed "Add photo" box with a file name. Save your photo with **exactly that name** and it
+appears automatically. No code changes needed.
+
+Certificates go in `assets/certificates/`:
+
+| File name | Certificate |
+|---|---|
+| `swimming.jpg` | Swimming |
+| `spring-classic.jpg` | Powerlifting, Spring Classic |
+| `omfa-guitar.jpg` | OMFA Provincials guitar gold |
+| `guitar-exam.jpg` | Guitar exam / level |
+| `kaggle.jpg` | Kaggle |
+| `math-contests.jpg` | Math contest certificate |
+| `dublin-heights.jpg` | Dublin Heights awards |
+
+Projects go in `assets/projects/`: `esp32.jpg`, `mmwave.jpg`, `arduino.jpg`.
+
+Tips: use JPG, about 1200–1600 px wide, and take certificate photos straight-on in good light.
+
+### Adding another certificate
+
+In `certificates.html`, copy one `<figure class="cert" …>…</figure>` block, then change:
+
+- `data-cat`: `athletics`, `music`, `academics` or `tech` (this is what the filter buttons use)
+- the file name in **both** `data-file="…"` and `src="…"`
+- the title in `<h3>` and the line under it in `<p>`
 
 ## Before sending this to universities
 
-Placeholders are highlighted in yellow on the page. To find them all, search the HTML files for `class="todo"`.
-When you fill one in, remove the `todo` wrapper so it shows as normal text. For example:
+Placeholders are highlighted in teal on the page. Search the HTML for `class="todo"` to find them, then replace each
+one with plain text. For example:
 
 ```html
-<span class="todo">school name</span>   →   Your School Name
-<p class="todo">Add 2–3 sentences…</p>  →   <p>Your sentences…</p>
+<span class="todo">your email</span>   →   you@example.com
 ```
 
 Checklist:
 
-- [ ] Email address (footer of every page, and the résumé)
-- [ ] Last name, school name, portfolio URL (résumé, About page)
-- [ ] Service page: volunteer roles, hours table, leadership roles
-- [ ] Grades you did each activity (Activities table), rugby position and team
-- [ ] Contest results, math and science courses (Academics)
-- [ ] Universities and programs you're considering (Goals)
+- [ ] Email (footer of every page and the résumé), last name, portfolio URL
+- [ ] Service page: volunteer roles, hours, leadership
+- [ ] Activities table: grades for each activity, rugby position and team
+- [ ] Contest results and course codes (Academics)
+- [ ] Universities and programs you're applying to, career interest (Goals)
+- [ ] Project names and descriptions (Projects)
+- [ ] Certificate titles and certificate photos
 - [ ] A personal story paragraph (About)
-- [ ] Photo sources (Credits page)
-- [ ] Check every fact: grade, years, awards and results
+- [ ] Photo sources (Credits)
 
 ## Editing
 
 - Colours and fonts: the first block of `style.css`.
-- Photos: the web-sized versions in `assets/web/` are the ones the pages use. To change one, save a JPG
-  around 1200 px wide there with the same name.
-- The header and footer are repeated on each page, so a nav change needs to be made in every HTML file.
+- The header and footer repeat on every page, so a nav change has to be made in each HTML file.

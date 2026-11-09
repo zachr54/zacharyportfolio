@@ -1,6 +1,6 @@
-// Small enhancements shared by every page. The site works without this file;
-// it only adds the mobile menu, scroll animations, lift bars and copy buttons.
-document.documentElement.classList.remove('no-js');
+// Small enhancements shared by every page. Without this file the site still
+// works; it adds the mobile menu, fade-ins, certificate filters and the photo viewer.
+document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
@@ -19,60 +19,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header border once the page scrolls
+    // Header background once the page scrolls
     const header = document.querySelector('.site-header');
-    const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 10);
+    const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 20);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Mark the current page in the nav
+    // Highlight the current page in the nav
     const page = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav a').forEach(a => {
         if (a.getAttribute('href') === page) a.classList.add('active');
     });
 
     // Fade sections in as they scroll into view
-    const reveal = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('in');
-            entry.target.querySelectorAll('.lift-fill').forEach(bar => {
-                bar.style.width = bar.dataset.pct + '%';
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    obs.unobserve(entry.target);
+                }
             });
-            entry.target.querySelectorAll('[data-count]').forEach(countUp);
-            obs.unobserve(entry.target);
-        });
-    }, { rootMargin: '0px 0px -60px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
-
-    // Count a number up from zero, e.g. <span data-count="532.5">532.5</span>
-    function countUp(el) {
-        const target = parseFloat(el.dataset.count);
-        const decimals = (el.dataset.count.split('.')[1] || '').length;
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        const start = performance.now();
-        const duration = 1400;
-        const step = now => {
-            const t = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - t, 3);
-            el.textContent = (target * eased).toFixed(decimals);
-            if (t < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
+        }, { rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     }
 
-    // Copy buttons on code blocks
-    document.querySelectorAll('.code-block').forEach(block => {
-        const btn = block.querySelector('.copy-btn');
-        const code = block.querySelector('code');
-        if (!btn || !code || !navigator.clipboard) { if (btn) btn.remove(); return; }
-        btn.addEventListener('click', () => {
-            navigator.clipboard.writeText(code.innerText).then(() => {
-                btn.textContent = 'Copied';
-                setTimeout(() => { btn.textContent = 'Copy'; }, 1600);
-            });
+    // Certificate filters
+    const filterBtns = document.querySelectorAll('.filters button');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+        document.querySelectorAll('.cert').forEach(c => {
+            c.hidden = cat !== 'all' && c.dataset.cat !== cat;
         });
-    });
+    }));
+
+    // Photo viewer: click a certificate photo to see it full size
+    const box = document.querySelector('.lightbox');
+    if (box && typeof box.showModal === 'function') {
+        const boxImg = box.querySelector('img');
+        const boxCap = box.querySelector('p');
+        document.querySelectorAll('.cert .view').forEach(btn => btn.addEventListener('click', () => {
+            const slot = btn.querySelector('.slot');
+            const img = btn.querySelector('img');
+            if (!img || slot.classList.contains('empty')) return;
+            boxImg.src = img.src;
+            boxImg.alt = img.alt;
+            boxCap.textContent = btn.closest('.cert').querySelector('h3').textContent;
+            box.showModal();
+        }));
+        box.addEventListener('click', e => { if (e.target === box || e.target.closest('.close')) box.close(); });
+    }
 
     // Print button on the résumé page
     document.querySelectorAll('[data-print]').forEach(btn =>
