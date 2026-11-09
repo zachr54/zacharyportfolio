@@ -53,6 +53,16 @@ Medals and trophies are saved as `.webp` with the background removed, so they si
 
 Tips: use JPG, about 1200–1600 px wide, and take certificate photos straight-on in good light.
 
+
+## Videos
+
+Short clips live in `assets/video/`, each with a `.jpg` still frame of the same name:
+`squat-200`, `bench-125`, `deadlift-202-5` (OPA Provincials 2026) and `kiwanis-guitar`
+(a 36-second excerpt from the 2025 Toronto Kiwanis Festival).
+
+Keep clips short (under ~40 seconds) and compressed (a few MB each) so pages stay fast.
+For full-length performances, upload to YouTube as unlisted and link or embed them instead.
+
 ### Adding another certificate
 
 In `certificates.html`, copy one `<figure class="cert" …>…</figure>` block, then change:

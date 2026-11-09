@@ -350,3 +350,20 @@ table:has(td.mark) th:last-child { text-align: right; }
 .duo .slot { aspect-ratio: auto; min-height: 0; }
 .duo .slot:first-child { aspect-ratio: 4 / 3; }
 .project .duo .slot img { height: 100%; }
+
+/* ---------- Videos ---------- */
+.vid { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; background: #000; }
+.vid video { display: block; width: 100%; height: auto; }
+.vid .badge { position: absolute; top: 12px; left: 12px; pointer-events: none; background: rgba(21, 19, 28, .82); color: var(--fg); font-size: .82rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.vid .badge b { font-family: var(--display); color: var(--amber); font-size: 1.05rem; letter-spacing: -0.01em; }
+.vid.hero { box-shadow: 0 0 0 2px var(--amber), 0 20px 50px -20px rgba(242, 179, 61, .45); }
+.vid.portrait { max-width: 340px; width: 100%; justify-self: center; margin-inline: auto; }
+
+.lift-videos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 16px; }
+.lift-videos > * { min-width: 0; }
+.lift-videos-head { grid-column: 1 / -1; }
+.lift-videos .hero { grid-row: 2 / 4; align-self: center; }
+@media (max-width: 720px) {
+    .lift-videos { grid-template-columns: 1fr; grid-template-rows: none; }
+    .lift-videos .hero { grid-row: auto; }
+}
