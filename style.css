@@ -130,7 +130,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 .stage > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: .55; z-index: -2; animation: lights-up 2.2s ease-out both; }
 .stage::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(21,19,28,.65) 0%, rgba(21,19,28,.1) 40%, rgba(21,19,28,.97) 100%); }
 .stage .wrap { margin-top: auto; width: 100%; padding-bottom: clamp(48px, 8vw, 80px); padding-top: 140px; display: grid; gap: 22px; }
-.stage h1 { max-width: 11ch; }
+.stage h1 { max-width: 15ch; font-size: clamp(2.2rem, 6vw, 5.4rem); }
 @keyframes lights-up { from { opacity: 0; transform: scale(1.04); } to { opacity: .55; transform: none; } }
 
 /* ---------- Page banner (inner pages) ---------- */
