@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         box.addEventListener('click', e => { if (e.target === box || e.target.closest('.close')) box.close(); });
     }
 
-    // Print button on the résumé page
+    // Print button on the resume page
     document.querySelectorAll('[data-print]').forEach(btn =>
         btn.addEventListener('click', () => window.print()));
 });

@@ -15,7 +15,7 @@ Open `index.html` in a browser to view it.
 | `projects.html` | Occupancy counter, FTC robot parts, Arduino |
 | `certificates.html` | Certificate photos with filters and a full-size viewer |
 | `goals.html` | Electrical Engineering and beyond |
-| `resume.html` | One-page résumé (print or save as PDF) |
+| `resume.html` | One-page resume (print or save as PDF) |
 | `bibliography.html` | Credits |
 
 ## Adding photos (certificates and projects)
