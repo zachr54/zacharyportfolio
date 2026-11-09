@@ -28,7 +28,7 @@ Certificates go in `assets/certificates/`:
 | File name | Certificate |
 |---|---|
 | `opa-provincials.webp` | Gold, OPA Ontario Provincials medal (added) |
-| `swimming.jpg` | Gold & bronze, Central Region Championships |
+| `swimming.webp` | 1 gold & 4 bronze Central Region medals (added) |
 | `rugby-mip.webp` | Most Improved Player trophy (added) |
 | `spring-classic.webp` | Spring Classic medal (added) |
 | `lifeguard-nl-pool.jpg`, `lifesaving-instructor.jpg`, `swim-instructor.jpg`, `first-aid-instructor.jpg`, `first-aid-cpr-c.jpg`, `high-five.jpg` | Lifesaving Society and HIGH FIVE certifications (added). To update one, replace the file with the same name. Cover your home address first. |
@@ -43,7 +43,7 @@ Certificates go in `assets/certificates/`:
 
 Projects go in `assets/projects/`: `traffic-light.jpg` and `traffic-light-build.jpg` (added), `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts).
 
-Other photos go in `assets/photos/`: `swimming.jpg` (you swimming), `fitness-club.jpg`, `pool.jpg` (at work).
+Other photos go in `assets/photos/`: `fitness-club.jpg`, `pool.jpg` (at work).
 
 To swap the powerlifting photo for one from OPA Provincials, replace `assets/web/powerlifting.jpg`
 with your new photo (same name).
@@ -83,7 +83,7 @@ Checklist:
 
 - [ ] Optional: contest results (Academics)
 - [ ] Project details (Projects)
-- [ ] Remaining certificate photos
+- [x] Certificate photos (all added)
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)
 
