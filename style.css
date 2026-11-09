@@ -367,3 +367,6 @@ table:has(td.mark) th:last-child { text-align: right; }
     .lift-videos { grid-template-columns: 1fr; grid-template-rows: none; }
     .lift-videos .hero { grid-row: auto; }
 }
+
+/* Award photos used as a section image (e.g. the swim medals) */
+.act .slot.award { aspect-ratio: 5 / 4; }
