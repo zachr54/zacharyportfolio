@@ -344,3 +344,9 @@ table:has(td.mark) th:last-child { text-align: right; }
 .awards-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .awards-pair .slot { aspect-ratio: 4 / 5; }
 .awards-pair .cap { font-size: 1.1rem; }
+
+/* A main project photo with a smaller "in progress" photo beside it */
+.duo { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: stretch; }
+.duo .slot { aspect-ratio: auto; min-height: 0; }
+.duo .slot:first-child { aspect-ratio: 4 / 3; }
+.project .duo .slot img { height: 100%; }

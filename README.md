@@ -39,11 +39,10 @@ Certificates go in `assets/certificates/`:
 | `omfa-trophy.webp` | OMFA 2024 Provincial Finals trophy (added) |
 | `tdssaa-regional.webp` | TDSSAA Regional medal (added) |
 | `honor-roll.jpg` | Advanced Student Honor Roll Award |
-| `math-contests.jpg` | Math contest certificate |
 | `dublin-heights.jpg` | Dublin Heights awards |
 | `kaggle.jpg` | Kaggle Python (added) |
 
-Projects go in `assets/projects/`: `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts), `arduino.jpg`.
+Projects go in `assets/projects/`: `traffic-light.jpg` and `traffic-light-build.jpg` (added), `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts).
 
 Other photos go in `assets/photos/`: `swimming.jpg` (you swimming), `fitness-club.jpg`, `pool.jpg` (at work).
 
@@ -74,8 +73,8 @@ one with plain text. For example:
 Checklist:
 
 - [ ] Optional: contest results (Academics)
-- [ ] Project details and the Arduino project (Projects)
-- [ ] Remaining certificate photos (and the math contest certificate title)
+- [ ] Project details (Projects)
+- [ ] Remaining certificate photos
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)
 
