@@ -30,7 +30,7 @@ Certificates go in `assets/certificates/`:
 | `opa-provincials.jpg` | Gold, OPA Ontario Provincials (powerlifting) |
 | `swimming.jpg` | Gold & bronze, Central Region Championships |
 | `rugby-mip.jpg` | Most Improved Player 2026 |
-| `lifeguard.jpg` | Lifeguard & swim instructor certifications |
+| `lifeguard-nl-pool.jpg`, `lifesaving-instructor.jpg`, `swim-instructor.jpg`, `first-aid-instructor.jpg`, `first-aid-cpr-c.jpg`, `high-five.jpg` | Lifesaving Society and HIGH FIVE certifications (added). To update one, replace the file with the same name. Cover your home address first. |
 | `omfa-guitar.jpg` | Gold, OMFA Provincials |
 | `kiwanis-guitar.jpg` | Gold, Ontario Kiwanis Music Festival |
 | `honor-roll.jpg` | Advanced Student Honor Roll Award |
@@ -66,12 +66,9 @@ one with plain text. For example:
 
 Checklist:
 
-- [ ] Email (footer of every page and the résumé), last name, portfolio URL
-- [ ] Course codes (Academics), optional contest results
-- [ ] Lifeguard / swim instructor certification names (Certificates, Résumé)
-- [ ] Universities and programs you're applying to, career interest (Goals)
+- [ ] Optional: contest results (Academics)
 - [ ] Project details and the Arduino project (Projects)
-- [ ] Certificate titles and certificate photos
+- [ ] Remaining certificate photos (Kaggle and math contest titles too)
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)
 

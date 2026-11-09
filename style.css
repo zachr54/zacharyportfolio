@@ -334,3 +334,7 @@ td.mark { font-family: var(--display); font-weight: 700; color: var(--amber); te
 td.mark.ip { font-family: var(--body); font-weight: 500; font-size: .85rem; color: var(--muted); }
 table:has(td.mark) th:last-child { text-align: right; }
 .eng { display: inline-block; margin-left: 8px; font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(242, 179, 61, .4); border-radius: 999px; padding: 1px 8px; vertical-align: 2px; }
+
+/* Certificates keep their whole shape (cards and pages are different sizes) */
+.cert .slot:not(.empty) { background: #f4f1ea; }
+.cert .slot img { object-fit: contain; }
