@@ -225,9 +225,8 @@ tfoot td { font-weight: 600; background: var(--bg-2); }
 /* ---------- Photo slots: show a placeholder until the photo file exists ---------- */
 .slot { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-2); }
 .slot img { width: 100%; height: 100%; object-fit: cover; }
-.slot.empty { border: 1.5px dashed var(--todo); background: var(--todo-bg); display: grid; place-items: center; text-align: center; padding: 18px; }
-.slot.empty img { display: none; }
-.slot.empty::after { content: 'Add photo\A' attr(data-file); white-space: pre-line; font-size: .8rem; line-height: 1.5; color: var(--todo); font-weight: 600; word-break: break-all; }
+/* A photo that hasn't been added yet is hidden; it appears once the file exists. */
+.slot.empty { display: none; }
 
 /* ---------- Certificates ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
@@ -266,9 +265,8 @@ tfoot td { font-weight: 600; background: var(--bg-2); }
 .encore p { color: var(--fg-2); max-width: 56ch; }
 
 /* ---------- Placeholders (to fill in before sending) ---------- */
-.todo { color: var(--todo); background: var(--todo-bg); border: 1px dashed var(--todo); border-radius: 6px; padding: 0 6px; font-style: normal; }
-div.todo, p.todo { display: block; padding: 14px 16px; }
-p.todo::before, div.todo::before { content: 'TO FILL IN: '; font-weight: 700; font-size: .72rem; letter-spacing: .1em; }
+/* Optional notes still to write are hidden on the live site. */
+.todo { display: none !important; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); }
@@ -370,3 +368,7 @@ table:has(td.mark) th:last-child { text-align: right; }
 
 /* Award photos used as a section image (e.g. the swim medals) */
 .act .slot.award { aspect-ratio: 5 / 4; }
+
+/* "Email copied" message */
+.toast { position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 16px); z-index: 100; background: var(--amber); color: #15131c; font-weight: 700; font-size: .92rem; padding: 12px 20px; border-radius: 999px; box-shadow: 0 12px 30px -10px rgba(0,0,0,.6); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: calc(100vw - 32px); text-align: center; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
