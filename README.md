@@ -38,8 +38,7 @@ Certificates go in `assets/certificates/`:
 | `kumon-level-k.jpg` | Kumon Level K proficiency certificate (added) |
 | `omfa-trophy.webp` | OMFA 2024 Provincial Finals trophy (added) |
 | `tdssaa-regional.webp` | TDSSAA Regional medal (added) |
-| `honor-roll.jpg` | Advanced Student Honor Roll Award |
-| `dublin-heights.jpg` | Dublin Heights awards |
+| `dublin-heights.webp` | Dublin Heights Principal, Mathematics and Science medals, combined (added) |
 | `kaggle.jpg` | Kaggle Python (added) |
 
 Projects go in `assets/projects/`: `traffic-light.jpg` and `traffic-light-build.jpg` (added), `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts).
