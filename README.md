@@ -35,6 +35,9 @@ Certificates go in `assets/certificates/`:
 | `omfa-guitar.webp` | Gold, OMFA Provincials medal (added) |
 | `kiwanis-guitar.jpg` | Gold, Ontario Kiwanis Music Festival |
 | `kumon-level-j.webp` | Kumon Math Level J plaque (added) |
+| `kumon-level-k.jpg` | Kumon Level K proficiency certificate (added) |
+| `omfa-trophy.webp` | OMFA 2024 Provincial Finals trophy (added) |
+| `tdssaa-regional.webp` | TDSSAA Regional medal (added) |
 | `honor-roll.jpg` | Advanced Student Honor Roll Award |
 | `math-contests.jpg` | Math contest certificate |
 | `dublin-heights.jpg` | Dublin Heights awards |
