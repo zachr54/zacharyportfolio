@@ -27,23 +27,29 @@ Certificates go in `assets/certificates/`:
 
 | File name | Certificate |
 |---|---|
-| `opa-provincials.jpg` | Gold, OPA Ontario Provincials (powerlifting) |
+| `opa-provincials.webp` | Gold, OPA Ontario Provincials medal (added) |
 | `swimming.jpg` | Gold & bronze, Central Region Championships |
-| `rugby-mip.jpg` | Most Improved Player 2026 |
+| `rugby-mip.webp` | Most Improved Player trophy (added) |
+| `spring-classic.webp` | Spring Classic medal (added) |
 | `lifeguard-nl-pool.jpg`, `lifesaving-instructor.jpg`, `swim-instructor.jpg`, `first-aid-instructor.jpg`, `first-aid-cpr-c.jpg`, `high-five.jpg` | Lifesaving Society and HIGH FIVE certifications (added). To update one, replace the file with the same name. Cover your home address first. |
-| `omfa-guitar.jpg` | Gold, OMFA Provincials |
+| `omfa-guitar.webp` | Gold, OMFA Provincials medal (added) |
 | `kiwanis-guitar.jpg` | Gold, Ontario Kiwanis Music Festival |
+| `kumon-level-j.webp` | Kumon Math Level J plaque (added) |
+| `kumon-level-k.jpg` | Kumon Level K proficiency certificate (added) |
+| `omfa-trophy.webp` | OMFA 2024 Provincial Finals trophy (added) |
+| `tdssaa-regional.webp` | TDSSAA Regional medal (added) |
 | `honor-roll.jpg` | Advanced Student Honor Roll Award |
-| `math-contests.jpg` | Math contest certificate |
 | `dublin-heights.jpg` | Dublin Heights awards |
-| `kaggle.jpg` | Kaggle |
+| `kaggle.jpg` | Kaggle Python (added) |
 
-Projects go in `assets/projects/`: `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts), `arduino.jpg`.
+Projects go in `assets/projects/`: `traffic-light.jpg` and `traffic-light-build.jpg` (added), `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts).
 
 Other photos go in `assets/photos/`: `swimming.jpg` (you swimming), `fitness-club.jpg`, `pool.jpg` (at work).
 
 To swap the powerlifting photo for one from OPA Provincials, replace `assets/web/powerlifting.jpg`
 with your new photo (same name).
+
+Medals and trophies are saved as `.webp` with the background removed, so they sit on the page's spotlight.
 
 Tips: use JPG, about 1200–1600 px wide, and take certificate photos straight-on in good light.
 
@@ -67,8 +73,8 @@ one with plain text. For example:
 Checklist:
 
 - [ ] Optional: contest results (Academics)
-- [ ] Project details and the Arduino project (Projects)
-- [ ] Remaining certificate photos (Kaggle and math contest titles too)
+- [ ] Project details (Projects)
+- [ ] Remaining certificate photos
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)
 

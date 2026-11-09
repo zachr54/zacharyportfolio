@@ -336,5 +336,17 @@ table:has(td.mark) th:last-child { text-align: right; }
 .eng { display: inline-block; margin-left: 8px; font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(242, 179, 61, .4); border-radius: 999px; padding: 1px 8px; vertical-align: 2px; }
 
 /* Certificates keep their whole shape (cards and pages are different sizes) */
-.cert .slot:not(.empty) { background: #f4f1ea; }
-.cert .slot img { object-fit: contain; }
+/* Awards and certificates sit under a soft spotlight, whole and uncropped */
+.slot.award:not(.empty) { background: radial-gradient(ellipse at 50% 35%, #3a3348 0%, var(--bg-2) 70%); }
+.slot.award img { object-fit: contain; padding: 7%; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .45)); }
+
+/* Home page: two awards side by side */
+.awards-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.awards-pair .slot { aspect-ratio: 4 / 5; }
+.awards-pair .cap { font-size: 1.1rem; }
+
+/* A main project photo with a smaller "in progress" photo beside it */
+.duo { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: stretch; }
+.duo .slot { aspect-ratio: auto; min-height: 0; }
+.duo .slot:first-child { aspect-ratio: 4 / 3; }
+.project .duo .slot img { height: 100%; }
