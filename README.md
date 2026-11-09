@@ -11,8 +11,8 @@ Open `index.html` in a browser to view it.
 | `about.html` | Story, heritage, quick facts, values |
 | `academics.html` | Awards, contests, coursework |
 | `activities.html` | Guitar, folk dance, rugby, robotics, powerlifting |
-| `service.html` | Service, leadership, volunteer hours |
-| `projects.html` | Electronics projects (Arduino, ESP32, mmWave) |
+| `service.html` | Leadership, work and service |
+| `projects.html` | Occupancy counter, FTC robot parts, Arduino |
 | `certificates.html` | Certificate photos with filters and a full-size viewer |
 | `goals.html` | Electrical Engineering and beyond |
 | `resume.html` | One-page résumé (print or save as PDF) |
@@ -27,15 +27,23 @@ Certificates go in `assets/certificates/`:
 
 | File name | Certificate |
 |---|---|
-| `swimming.jpg` | Swimming |
-| `spring-classic.jpg` | Powerlifting, Spring Classic |
-| `omfa-guitar.jpg` | OMFA Provincials guitar gold |
-| `guitar-exam.jpg` | Guitar exam / level |
-| `kaggle.jpg` | Kaggle |
+| `opa-provincials.jpg` | Gold, OPA Ontario Provincials (powerlifting) |
+| `swimming.jpg` | Gold & bronze, Central Region Championships |
+| `rugby-mip.jpg` | Most Improved Player 2026 |
+| `lifeguard.jpg` | Lifeguard & swim instructor certifications |
+| `omfa-guitar.jpg` | Gold, OMFA Provincials |
+| `kiwanis-guitar.jpg` | Gold, Ontario Kiwanis Music Festival |
+| `honor-roll.jpg` | Advanced Student Honor Roll Award |
 | `math-contests.jpg` | Math contest certificate |
 | `dublin-heights.jpg` | Dublin Heights awards |
+| `kaggle.jpg` | Kaggle |
 
-Projects go in `assets/projects/`: `esp32.jpg`, `mmwave.jpg`, `arduino.jpg`.
+Projects go in `assets/projects/`: `mmwave.jpg` (occupancy counter), `ftc-cad.jpg` (robot parts), `arduino.jpg`.
+
+Other photos go in `assets/photos/`: `swimming.jpg` (you swimming), `fitness-club.jpg`, `pool.jpg` (at work).
+
+To swap the powerlifting photo for one from OPA Provincials, replace `assets/web/powerlifting.jpg`
+with your new photo (same name).
 
 Tips: use JPG, about 1200–1600 px wide, and take certificate photos straight-on in good light.
 
@@ -59,11 +67,10 @@ one with plain text. For example:
 Checklist:
 
 - [ ] Email (footer of every page and the résumé), last name, portfolio URL
-- [ ] Service page: volunteer roles, hours, leadership
-- [ ] Activities table: grades for each activity, rugby position and team
-- [ ] Contest results and course codes (Academics)
+- [ ] Course codes (Academics), optional contest results
+- [ ] Lifeguard / swim instructor certification names (Certificates, Résumé)
 - [ ] Universities and programs you're applying to, career interest (Goals)
-- [ ] Project names and descriptions (Projects)
+- [ ] Project details and the Arduino project (Projects)
 - [ ] Certificate titles and certificate photos
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)

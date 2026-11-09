@@ -327,3 +327,4 @@ p.todo::before, div.todo::before { content: 'TO FILL IN: '; font-weight: 700; fo
     h2, .act-text h2, .encore h2 { font-size: 1.8rem; }
     h3 { font-size: 1.4rem; }
 }
+.card .slot { aspect-ratio: 16 / 10; }
