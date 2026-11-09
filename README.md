@@ -68,7 +68,7 @@ Checklist:
 
 - [ ] Optional: contest results (Academics)
 - [ ] Project details and the Arduino project (Projects)
-- [ ] Remaining certificate photos (Kaggle and math contest titles too)
+- [ ] Remaining certificate photos (and the math contest certificate title)
 - [ ] A personal story paragraph (About)
 - [ ] Photo sources (Credits)
 
